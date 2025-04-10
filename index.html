@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>¿Quién es? - Juego de Animales</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="game-container">
-        <div id="intro-screen" class="active">
-            <h1>¿Quién es?</h1>
-            <p class="instructions">Toca el micrófono y di el nombre del animal en español</p>
-            <p class="start-text">Toca en cualquier lugar para comenzar</p>
+      <div id="intro-screen" class="active">
+        <h1>¿Quién es?</h1>
+        <p class="instructions">
+          Toca el micrófono y di el nombre del animal en español
+        </p>
+        <p class="start-text">Toca en cualquier lugar para comenzar</p>
+      </div>
+
+      <div id="game-screen" class="hidden">
+        <div class="display-wrapper">
+          <div class="display-container">
+            <div id="display-area">
+              <!-- Animal image will appear here -->
+            </div>
+          </div>
         </div>
 
-        <div id="game-screen" class="hidden">
-            <div id="display-area">
-                <!-- Animal image will appear here -->
-            </div>
-            <div id="animal-name" class="hidden"></div>
-            <div class="controls">
-                <button id="sound-btn" class="control-btn">
-                    <img src="images/speaker.png" alt="Sonido">
-                </button>
-                <button id="mic-btn" class="control-btn">
-                    <img src="images/mic.png" alt="Micrófono">
-                </button>
-            </div>
+        <div class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
         </div>
+
+        <div class="controls">
+          <button id="sound-btn" class="control-btn">
+            <div class="button-wrapper">
+              <div class="button-background">
+                <div class="button-circle"></div>
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="public/images/speaker-high-fill-2.svg"
+                  alt="Speaker"
+                  class="icon-image"
+                />
+              </div>
+            </div>
+          </button>
+          <button id="mic-btn" class="control-btn">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="public/images/speaker-high-fill-2.svg"
+            >
+              <path
+                d="M28 44V50M20 44C13.3726 44 8 38.6274 8 32V24C8 17.3726 13.3726 12 20 12H36C42.6274 12 48 17.3726 48 24V32C48 38.6274 42.6274 44 36 44H20Z"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <rect x="20" y="6" width="16" height="32" rx="8" fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
